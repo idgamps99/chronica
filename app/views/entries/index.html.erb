@@ -1,0 +1,10 @@
+<% if @entries.empty? %>
+  <h2>No Entries yet</h2>
+<% else %>
+  <ul>
+    <% @entries.each do |entry| %>
+      <li><%= entry.title %></li>
+      <p><%= entry.content %></p>
+    <% end %>
+  </ul>
+<% end %>
