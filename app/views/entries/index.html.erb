@@ -1,0 +1,12 @@
+<% if @entries.empty? %>
+  <h2>No Entries yet</h2>
+<% else %>
+  <ul>
+    <% @entries.each do |entry| %>
+      <li>
+        <%= link_to entry.title, entry_path(entry) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<%= link_to "Add a New Entry", new_diary_entry_path %>

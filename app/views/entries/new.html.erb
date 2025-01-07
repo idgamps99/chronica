@@ -1,0 +1,16 @@
+<h2>New Entry</h2>
+<%= simple_form_for [@diary, @entry] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content, as: :text %>
+  <%= f.input :tag, label: "Tag", collection: %w(Personal
+                                                  Work
+                                                  Family
+                                                  Friends
+                                                  Travel
+                                                  Hobbies
+                                                  Health
+                                                  Goals
+                                                  Dreams
+                                                  Milestones) %>
+  <%= f.button :submit %>
+<% end %>
