@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :diaries, only: [:new, :create] do
     resources :entries, only: [:index, :new, :create]
   end
+
   resources :entries, only: [:show]
 end
