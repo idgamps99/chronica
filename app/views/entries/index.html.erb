@@ -3,8 +3,9 @@
 <% else %>
   <ul>
     <% @entries.each do |entry| %>
-      <li><%= entry.title %></li>
-      <p><%= entry.content %></p>
+      <li>
+        <%= link_to entry.title, entry_path(entry) %>
+      </li>
     <% end %>
   </ul>
 <% end %>
