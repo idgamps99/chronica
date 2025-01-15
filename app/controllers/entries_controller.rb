@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :set_diary, only: [:new, :create]
+  before_action :set_diary, only: [:new, :create, :destroy]
 
   def index
     @entries = Entry.where(diary_id: params[:diary_id])
@@ -7,6 +7,7 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find(params[:id])
+    @diary = Diary.find(@entry.diary_id)
   end
 
   def new
@@ -22,6 +23,12 @@ class EntriesController < ApplicationController
     else
       render "entries/new", status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @entry = Entry.find(params[:id])
+    @entry.destroy
+    redirect_to diary_entries_path(@diary)
   end
 
   private
