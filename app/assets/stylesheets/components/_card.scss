@@ -1,0 +1,59 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 20px; /* Space between cards */
+  justify-content: center; /* Center the grid horizontally if needed */
+  padding: 20px; /* Optional padding around the grid */
+  margin: 10px 64px;
+}
+
+.card {
+  width: 100%; /* Adjust width to fill grid cell */
+  height: 450px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.card-header {
+  margin-bottom: 20px;
+}
+
+.diary-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px 0;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #e0e0e0;
+}
+
+.new-entry {
+  color: #4CAF50;
+}
+
+.settings {
+  color: #2196F3;
+}

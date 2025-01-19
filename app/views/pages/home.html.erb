@@ -1,8 +1,14 @@
-<h1>My Diaries:</h1>
-<ul>
+<div class="card-container">
   <% @diaries.each do |diary| %>
-    <li><%= diary.title %> - <%= link_to "View Diary", diary_entries_path(diary) %></li>
+    <div class="card">
+      <div class="card-header">
+        <div class="diary-name"><%= diary.title %></div>
+      </div>
+      <div class="card-body">
+        <button class="button new-entry">New Entry</button>
+        <button class="button settings">Settings</button>
+      </div>
+    </div>
   <% end %>
-</ul>
-
-<button><%= link_to "New Diary", new_diary_path %></button>
+  <button><%= link_to "New Diary", new_diary_path %></button>
+</div>
