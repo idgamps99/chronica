@@ -1,14 +1,48 @@
-<div class="card-container">
-  <% @diaries.each do |diary| %>
-    <div class="card">
-      <div class="card-header">
-        <div class="diary-name"><%= diary.title %></div>
-      </div>
-      <div class="card-body">
-        <button class="button new-entry">New Entry</button>
-        <button class="button settings">Settings</button>
-      </div>
-    </div>
+<div>
+  <%= link_to new_diary_path do %>
+    <button class="top-right-btn">New Diary</button>
   <% end %>
-  <button><%= link_to "New Diary", new_diary_path %></button>
+</div>
+
+<div class="card-container">
+  <div class="diary-grid">
+    <% @diaries.each do |diary| %>
+      <div class="diary-card">
+        <div class="journal-sidebar"></div>
+        <div class="journal-content">
+          <div class="journal-box">
+            <div class="journal-header">
+              <h1><%= diary.title %></h1>
+            </div>
+            <div class="journal-actions">
+              <%= link_to new_diary_entry_path(diary) do %>
+                <button class="action-btn">
+                  <i class="icon">&#9998;</i>
+                  <%# <span>New Entry</span> %>
+                </button>
+              <% end %>
+              <%= link_to diary_entries_path(diary) do %>
+                <button class="action-btn">
+                  <i class="icon">&#9776;</i>
+                  <%# <span>Entries</span> %>
+                </button>
+              <% end %>
+              <%= link_to "#" do %>
+                <button class="action-btn">
+                  <i class="icon">&#9881;</i>
+                  <%# <span>Settings</span> %>
+                </button>
+              <% end %>
+              <%= link_to "#" do %>
+                <button class="action-btn">
+                  <i class="icon">&#128274;</i>
+                  <%# <span>Lock</span> %>
+                </button>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
