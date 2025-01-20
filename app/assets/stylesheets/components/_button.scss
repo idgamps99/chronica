@@ -22,8 +22,8 @@
 
 .top-right-btn {
   // position: absolute; /* Allows precise positioning within the grid container */
-  top: 10px; /* Push the button down from the top edge */
-  right: 10px; /* Push the button in from the right edge */
+  // top: 10px; /* Push the button down from the top edge */
+  // right: 10px; /* Push the button in from the right edge */
   padding: 10px 20px; /* Add some padding for a nice look */
   background-color: #007bff; /* A nice blue color */
   color: white; /* White text for contrast */
@@ -33,6 +33,8 @@
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease-in-out;
+//   margin-left: auto;
+//   margin-right: 0;
 }
 
 .top-right-btn:hover {
