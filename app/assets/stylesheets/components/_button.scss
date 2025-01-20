@@ -1,0 +1,40 @@
+.action-btn {
+  flex: 1; /* Allows buttons to take equal space while respecting parent size */
+  max-width: 150px; /* Restricts individual button width */
+  margin: 0 5px; /* Adds consistent space between buttons */
+  padding: 10px; /* Keeps buttons compact */
+  text-align: center; /* Ensures text and icons align centrally */
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column; /* Stacks text and icon vertically */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+  background-color: #ddd;
+}
+
+.top-right-btn {
+  // position: absolute; /* Allows precise positioning within the grid container */
+  top: 10px; /* Push the button down from the top edge */
+  right: 10px; /* Push the button in from the right edge */
+  padding: 10px 20px; /* Add some padding for a nice look */
+  background-color: #007bff; /* A nice blue color */
+  color: white; /* White text for contrast */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.top-right-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
