@@ -1,6 +1,15 @@
 <div class="entry-form">
-  <%= simple_form_for [@diary, @entry],  html: { autocomplete: 'off' } do |f| %>
+  <%= simple_form_for [@diary, @entry], html: { autocomplete: 'off' } do |f| %>
+    <%= button_tag(type: 'submit', class: 'btn-save') do %>
+      <i class="fa-solid fa-floppy-disk"></i>
+    <% end %>
     <%= f.input :title, placeholder: "Entry Title", class: "entry-title", label: false %>
+    <%= f.input :content, as: :text, label: false, placeholder: "Your entry here", class: "entry-content" %>
+  <% end %>
+  <%= link_to "Back", root_path, class: "btn-back" %>
+</div>
+
+
     <%# <%= f.input :tag, collection: %w(Personal
                                                     Work
                                                     Family
@@ -11,7 +20,3 @@
                                                     Goals
                                                     Dreams
                                                     Milestones) %>
-    <%= f.input :content, as: :text, label: false, placeholder: "Your entry here", class: "entry-content" %>
-    <%= f.button :submit, "Save" %>
-  <% end %>
-</div>

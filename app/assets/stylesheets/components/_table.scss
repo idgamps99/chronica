@@ -1,0 +1,63 @@
+.entries-table {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+
+    thead {
+      tr {
+        border-bottom: 2px solid #d10000; // Red underline for header
+      }
+
+      th {
+        text-align: left;
+        padding: 10px;
+        font-weight: bold;
+        color: #333;
+      }
+    }
+
+    tbody {
+      tr {
+        &:hover {
+          background-color: #f9f9f9; // Highlight row on hover
+          .entry-title {
+            background-color: #f9f9f9;
+          }
+        }
+      }
+
+      td {
+        padding: 10px;
+        vertical-align: middle;
+
+        &:first-child {
+          width: 30px; // Checkbox column
+        }
+
+        .entry-title {
+          font-weight: bold;
+          color: #000;
+          background-color: #f4d4a4;
+        }
+
+        .entry-description {
+          color: #666;
+          font-size: 0.9em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        i {
+          color: #999; // Icon color
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+.diary-title {
+  margin: 10px;
+}

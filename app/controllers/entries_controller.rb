@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :set_diary, only: [:new, :create, :destroy]
+  before_action :set_diary, only: [:index, :new, :create, :destroy]
 
   def index
     @entries = Entry.where(diary_id: params[:diary_id])
