@@ -12,6 +12,11 @@
 @import "pages/index";
 
 
+.container {
+  margin: 0 auto;
+  justify-content: center;
+}
+
 .card-container {
   display: flex;
   justify-content: center;

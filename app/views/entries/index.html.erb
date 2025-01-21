@@ -1,36 +1,39 @@
-<div class="diary-title">
-  <h2><%= @diary.title %></h2>
-  <p><%= @entries.count %> total entries  |  Created on <%= @diary.created_at.strftime("%a. %d/%m/%Y") %></p>
-</div>
+<div class="table-container">
 
-
-<% if @entries.empty? %>
-  <h2>No Entries yet</h2>
-<% else %>
-  <div class="entries-table">
-    <table>
-      <thead>
-        <tr>
-          <th>Entry</th>
-          <th>Date Created</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @entries.each do |entry| %>
-          <tr>
-            <td>
-              <%= link_to entry_path(entry) do %>
-                <div class="entry-title"><%= entry.title %></div>
-                <div class="entry-description"><%= entry.content.first(50)... %></div>
-              <% end %>
-            </td>
-            <td><%= entry.created_at.strftime("%a. %d/%m/%Y") %></td>
-            </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <div class="diary-title">
+    <h2><%= @diary.title %></h2>
+    <p><%= @entries.count %> total entries  |  Created on <%= @diary.created_at.strftime("%a. %d/%m/%Y") %></p>
   </div>
-<% end %>
 
-<%= link_to "Add a New Entry", new_diary_entry_path %>
-<%= link_to "Back", root_path %>
+
+  <% if @entries.empty? %>
+    <h2>No Entries yet</h2>
+  <% else %>
+    <div class="entries-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Entry</th>
+            <th>Date Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @entries.each do |entry| %>
+            <tr>
+              <td>
+                <%= link_to entry_path(entry) do %>
+                  <div class="entry-title"><%= entry.title %></div>
+                  <div class="entry-description"><%= entry.content.first(50)... %></div>
+                <% end %>
+              </td>
+              <td><%= entry.created_at.strftime("%a. %d/%m/%Y") %></td>
+              </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+
+  <%= link_to "Add a New Entry", new_diary_entry_path %>
+  <%= link_to "Back", root_path %>
+</div>
