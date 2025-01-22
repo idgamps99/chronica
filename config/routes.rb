@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     resources :entries, only: [:index, :new, :create]
   end
 
-  resources :entries, only: [:show, :destroy]
+  resources :entries, only: [:edit, :update, :destroy]
 end

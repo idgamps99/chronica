@@ -1,8 +1,18 @@
 <div class="table-container">
 
-  <div class="diary-title">
-    <h2><%= @diary.title %></h2>
-    <p><%= @entries.count %> total entries  |  Created on <%= @diary.created_at.strftime("%a. %d/%m/%Y") %></p>
+  <%= link_to root_path do %>
+    <i class="fa-solid fa-arrow-left circle-black"></i>
+  <% end %>
+
+  <div class="title-container">
+    <div class="diary-title">
+      <h2><%= @diary.title %></h2>
+      <p><%= @entries.count %> total entries  |  Created on <%= @diary.created_at.strftime("%a. %d/%m/%Y") %></p>
+    </div>
+
+    <div class="diary-new">
+      <%= link_to "New Entry", new_diary_entry_path, class: "btn-new-diary" %>
+    </div>
   </div>
 
 
@@ -34,6 +44,4 @@
     </div>
   <% end %>
 
-  <%= link_to "Add a New Entry", new_diary_entry_path %>
-  <%= link_to "Back", root_path %>
 </div>

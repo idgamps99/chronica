@@ -5,9 +5,13 @@ class EntriesController < ApplicationController
     @entries = Entry.where(diary_id: params[:diary_id])
   end
 
-  def show
+  def edit
     @entry = Entry.find(params[:id])
     @diary = Diary.find(@entry.diary_id)
+  end
+
+  def update
+    raise
   end
 
   def new

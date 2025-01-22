@@ -6,7 +6,9 @@
     <%= f.input :title, placeholder: "Entry Title", class: "entry-title", label: false %>
     <%= f.input :content, as: :text, label: false, placeholder: "Your entry here", class: "entry-content" %>
   <% end %>
-  <%= link_to "Back", root_path, class: "btn-back" %>
+  <%= link_to root_path do %>
+    <i class="fa-solid fa-arrow-left circle-black"></i>
+  <% end %>
 </div>
 
 
