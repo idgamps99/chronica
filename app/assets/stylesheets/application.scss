@@ -17,19 +17,10 @@
   justify-content: center;
 }
 
-.card-container {
-  display: flex;
-  justify-content: center;
-  width: 100%; /* Take up full width */
-  max-width: 1200px; /* Limit the maximum width */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Add some padding for spacing */
-}
-
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4d4a4; /* Wooden background color */
+  background-color: #f4d4a4;
   min-height: 100vh;
 }
 
