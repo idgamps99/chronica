@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :set_diary, only: [:index, :new, :create, :destroy]
+  before_action :set_entry, only: [:edit, :update]
 
   def index
     @entries = Entry.where(diary_id: params[:diary_id])
@@ -11,7 +12,11 @@ class EntriesController < ApplicationController
   end
 
   def update
-    raise
+    if @entry.update(entry_params)
+	    redirect_to edit_entry_path(@entry), notice: 'Entry was successfully updated.'
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def new
@@ -39,6 +44,10 @@ class EntriesController < ApplicationController
 
   def entry_params
     params.require(:entry).permit(:title, :content, :tag)
+  end
+
+  def set_entry
+    @entry = Entry.find(params[:id])
   end
 
   def set_diary

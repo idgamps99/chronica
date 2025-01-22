@@ -31,7 +31,7 @@
           <% @entries.each do |entry| %>
             <tr>
               <td>
-                <%= link_to entry_path(entry) do %>
+                <%= link_to edit_entry_path(entry) do %>
                   <div class="entry-title"><%= entry.title %></div>
                   <div class="entry-description"><%= entry.content.first(50)... %></div>
                 <% end %>

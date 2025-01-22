@@ -1,0 +1,12 @@
+<div class="entry-form">
+  <%= simple_form_for @entry, html: { autocomplete: 'off' } do |f| %>
+    <%= button_tag(type: 'submit', class: 'btn-save') do %>
+      <i class="fa-solid fa-floppy-disk"></i>
+    <% end %>
+    <%= f.input :title, placeholder: "Entry Title", class: "entry-title", label: false %>
+    <%= f.input :content, as: :text, label: false, placeholder: "Your entry here", class: "entry-content" %>
+  <% end %>
+  <%= link_to diary_entries_path(@diary) do %>
+    <i class="fa-solid fa-arrow-left circle-black"></i>
+  <% end %>
+</div>
