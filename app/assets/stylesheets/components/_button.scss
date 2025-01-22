@@ -21,20 +21,46 @@
 }
 
 .top-right-btn {
-  // position: absolute; /* Allows precise positioning within the grid container */
-  top: 10px; /* Push the button down from the top edge */
-  right: 10px; /* Push the button in from the right edge */
-  padding: 10px 20px; /* Add some padding for a nice look */
-  background-color: #007bff; /* A nice blue color */
-  color: white; /* White text for contrast */
+  background-color: #007bff;
+  color: #fff;
   border: none;
+  padding: 10px 20px;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .top-right-btn:hover {
   background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-save {
+  float: right;
+  padding: 10px;
+  outline: none;
+  margin: 4px;
+}
+
+.btn-back {
+  background-color: #429CFF;
+  border-radius: 24px;
+  padding: 4px 16px;
+}
+
+.btn-new-diary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.circle-black {
+  background-color: #02080e;
+  padding: 5px;
+  border-radius: 50px;
 }

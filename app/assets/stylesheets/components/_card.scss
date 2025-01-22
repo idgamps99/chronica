@@ -1,10 +1,17 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Take up full width */
+  max-width: 1200px; /* Limit the maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add some padding for spacing */
+}
+
 .diary-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two diaries per row */
   gap: 20px; /* Space between cards */
-  padding: 20px;
-  width: 80%;
-  max-width: 1200px;
+  width: 100%; /* Take the full width of the parent */
 }
 
 .diary-card {

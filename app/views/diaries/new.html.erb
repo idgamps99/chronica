@@ -1,6 +1,9 @@
-<h2>New Diary:</h2>
-<%= simple_form_for @diary do |f| %>
-  <%= f.input :title %>
-  <%= f.input :private %>
-  <%= f.button :submit %>
-<% end %>
+<div class="form-container">
+  <div class="form-new-diary">
+    <%= simple_form_for @diary do |f| %>
+      <%= f.input :title, label: "Title" %>
+      <%= f.input :private %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

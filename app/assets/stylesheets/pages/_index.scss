@@ -1,2 +1,24 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diary-title {
+  h2 {
+    margin: 0;
+    font-size: 50px;
+  }
+  p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+}
+
+.diary-new {
+  text-align: center;
+}
