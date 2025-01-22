@@ -11,3 +11,17 @@
 #entry_content {
   height: 400px;
 }
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-new-diary {
+  background-color: white;
+  text-align: left;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 15px;
+}
