@@ -13,7 +13,7 @@ class EntriesController < ApplicationController
 
   def update
     if @entry.update(entry_params)
-	    redirect_to edit_entry_path(@entry), notice: 'Entry was successfully updated.'
+	    redirect_to edit_entry_path(@entry), notice: 'Entry Saved'
     else
       render :edit, status: :unprocessable_entity
     end
@@ -28,7 +28,7 @@ class EntriesController < ApplicationController
     @entry.date = Date.new
     @entry.diary = @diary
     if @entry.save
-      redirect_to diary_entries_path(@diary)
+      redirect_to edit_entry_path(@entry), notice: 'Entry Saved'
     else
       render "entries/new", status: :unprocessable_entity
     end
