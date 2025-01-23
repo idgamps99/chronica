@@ -37,7 +37,7 @@ class EntriesController < ApplicationController
   def destroy
     @entry = Entry.find(params[:id])
     @entry.destroy
-    redirect_to diary_entries_path(@diary)
+    redirect_to diary_entries_path(@diary), status: :see_other
   end
 
   private

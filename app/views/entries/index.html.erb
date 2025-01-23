@@ -37,6 +37,11 @@
                 <% end %>
               </td>
               <td><%= entry.created_at.strftime("%a. %d/%m/%Y") %></td>
+              <td>
+                <%= link_to diary_entry_path(@diary, entry), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                  <i class="fa-solid fa-trash"></i>
+                <% end %>
+              </td>
               </tr>
           <% end %>
         </tbody>
