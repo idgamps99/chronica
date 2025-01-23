@@ -38,7 +38,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_23_114855) do
   create_table "friends", force: :cascade do |t|
     t.bigint "sender_id", null: false
     t.bigint "recipient_id", null: false
-    t.boolean "accepted"
+    t.boolean "accepted", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipient_id"], name: "index_friends_on_recipient_id"
