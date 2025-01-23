@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_01_23_114855) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_07_120505) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -35,16 +35,6 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_23_114855) do
     t.index ["diary_id"], name: "index_entries_on_diary_id"
   end
 
-  create_table "friends", force: :cascade do |t|
-    t.bigint "sender_id", null: false
-    t.bigint "recipient_id", null: false
-    t.boolean "accepted", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recipient_id"], name: "index_friends_on_recipient_id"
-    t.index ["sender_id"], name: "index_friends_on_sender_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -59,6 +49,4 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_23_114855) do
 
   add_foreign_key "diaries", "users"
   add_foreign_key "entries", "diaries"
-  add_foreign_key "friends", "users", column: "recipient_id"
-  add_foreign_key "friends", "users", column: "sender_id"
 end
