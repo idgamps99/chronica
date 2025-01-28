@@ -59,4 +59,6 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_27_171840) do
 
   add_foreign_key "diaries", "users"
   add_foreign_key "entries", "diaries"
+  add_foreign_key "friendships", "users", column: "receiver_id"
+  add_foreign_key "friendships", "users", column: "sender_id"
 end

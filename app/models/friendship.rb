@@ -1,8 +1,10 @@
 class Friendship < ApplicationRecord
-  belongs_to :sender, optional: true, class_name: "::User", inverse_of: :friendships_senders
-  belongs_to :receiver, optional: true, class_name: "::User", inverse_of: :friendships_receivers
+  belongs_to :sender, class_name: "User"
+  belongs_to :receiver, class_name: "User"
+
+  scope :accepted, -> { where(accepted: true) }
 
   def accept
-    self.accepted = true
+    update(accepted: true)
   end
 end
