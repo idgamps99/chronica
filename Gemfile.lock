@@ -100,9 +100,6 @@ GEM
     bootstrap (5.3.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.11.8, < 3)
-    brick (1.0.228)
-      activerecord (>= 3.1.1)
-      fancy_gets
     builder (3.3.0)
     capybara (3.40.0)
       addressable
@@ -133,7 +130,6 @@ GEM
     drb (2.2.1)
     erubi (1.13.1)
     execjs (2.10.0)
-    fancy_gets (0.1.10)
     ffi (1.17.1-aarch64-linux-gnu)
     ffi (1.17.1-aarch64-linux-musl)
     ffi (1.17.1-arm-linux-gnu)
@@ -322,7 +318,6 @@ DEPENDENCIES
   autoprefixer-rails
   bootsnap
   bootstrap (~> 5.2)
-  brick
   capybara
   debug
   devise

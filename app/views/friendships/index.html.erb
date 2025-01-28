@@ -1,13 +1,6 @@
 <h2>My Friends:</h2>
 <ul>
   <% @accepted.each do |friend| %>
-    <li><%= friend.sender_id %> + <%= friend.receiver_id %> + <%= friend.accepted %></li>
-  <% end %>
-</ul>
-
-<h2>Pending:</h2>
-<ul>
-  <% @pending.each do |friend| %>
-    <li><%= friend.sender_id %> + <%= friend.receiver_id %> + <%= friend.accepted %></li>
+    <li><%= friend %>></li>
   <% end %>
 </ul>
