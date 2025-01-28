@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   resources :entries, only: [:edit, :update]
   resources :friendships, only: [:index]
+  resources :users, only: [:index]
 end

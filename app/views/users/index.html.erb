@@ -1,0 +1,7 @@
+<%= render "shared/searchbar" %>
+
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.forename %> <%= user.surname %> - Add Friend</li>
+  <% end %>
+</ul>
