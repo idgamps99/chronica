@@ -1,6 +1,13 @@
 <h2>My Friends:</h2>
 <ul>
   <% @accepted.each do |friend| %>
-    <li><%= friend %>></li>
+    <li><%= friend.forename %> <%= friend.surname %></li>
+  <% end %>
+</ul>
+
+<h2>Pending:</h2>
+<ul>
+  <% @pending.each do |friend| %>
+    <li><%= friend.forename %> <%= friend.surname %> - Accept | Reject</li>
   <% end %>
 </ul>
