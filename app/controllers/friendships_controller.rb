@@ -9,6 +9,7 @@ class FriendshipsController < ApplicationController
   end
 
   def show
-    @friend = Friendship.find(params[:id])
+    @friend = current_user.friends.find(params[:id])
+    @diaries = Diary.where(user_id: params[:id])
   end
 end

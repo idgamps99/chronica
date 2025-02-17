@@ -11,7 +11,7 @@
     </div>
 
     <div class="diary-new">
-      <%= link_to "New Entry", new_diary_entry_path, class: "btn-new-diary" %>
+      <%= link_to "New Entry", new_diary_entry_path, class: "btn-new-diary" if current_user == @owner %>
     </div>
   </div>
 
@@ -38,8 +38,10 @@
               </td>
               <td><%= entry.created_at.strftime("%a. %d/%m/%Y") %></td>
               <td>
-                <%= link_to diary_entry_path(@diary, entry), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-                  <i class="fa-solid fa-trash"></i>
+                <% if current_user == @owner %>
+                  <%= link_to diary_entry_path(@diary, entry), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                    <i class="fa-solid fa-trash"></i>
+                  <% end %>
                 <% end %>
               </td>
               </tr>
