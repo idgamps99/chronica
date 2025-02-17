@@ -3,13 +3,16 @@
 <h2>My Friends:</h2>
 <ul>
   <% @accepted.each do |friend| %>
-    <li><%= link_to "#{friend.forename} #{friend.surname}", friendship_path(friend) %></li>
+    <li><%= link_to "#{friend.forename} #{friend.surname}", friendship_path(friend), class: "text-black" %></li>
   <% end %>
 </ul>
 
 <h2>Pending:</h2>
 <ul>
   <% @pending.each do |friend| %>
-    <li><%= friend.forename %> <%= friend.surname %> - Accept | Reject</li>
+  <% request = Friendship.find_by(sender_id: friend.id, receiver_id: current_user) %>
+  <%= friendships_path(request) %>
+  <%= request %>
+    <li><%= friend.forename %> <%= friend.surname %> - <%= link_to "Accept", friendships_path, method: :patch, data: { turbo_method: :patch } %> | Reject</li>
   <% end %>
 </ul>

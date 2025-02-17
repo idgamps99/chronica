@@ -12,4 +12,16 @@ class FriendshipsController < ApplicationController
     @friend = current_user.friends.find(params[:id])
     @diaries = Diary.where(user_id: params[:id])
   end
+
+  def update
+    raise
+  end
+
+  private
+
+  def accept
+  end
+
+  def reject
+  end
 end

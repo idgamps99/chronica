@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :entries, only: [:edit, :update]
-  resources :friendships, only: [:index, :show]
+  resources :friendships, only: [:index, :show, :update, :destroy]
   resources :users, only: [:index]
 end
