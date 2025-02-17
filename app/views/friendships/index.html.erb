@@ -3,7 +3,7 @@
 <h2>My Friends:</h2>
 <ul>
   <% @accepted.each do |friend| %>
-    <li><%= friend.forename %> <%= friend.surname %></li>
+    <li><%= link_to "#{friend.forename} #{friend.surname}", friendship_path(friend) %></li>
   <% end %>
 </ul>
 

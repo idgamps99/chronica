@@ -7,4 +7,8 @@ class FriendshipsController < ApplicationController
       @pending << User.find(id)
     end
   end
+
+  def show
+    @friend = Friendship.find(params[:id])
+  end
 end
