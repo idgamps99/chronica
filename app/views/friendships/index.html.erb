@@ -11,8 +11,9 @@
 <ul>
   <% @pending.each do |friend| %>
   <% request = Friendship.find_by(sender_id: friend.id, receiver_id: current_user) %>
-  <%= friendships_path(request) %>
-  <%= request %>
-    <li><%= friend.forename %> <%= friend.surname %> - <%= link_to "Accept", friendships_path, method: :patch, data: { turbo_method: :patch } %> | Reject</li>
+    <li>
+      <%= friend.forename %> <%= friend.surname %> -
+      <%= link_to "Accept", accept_friendship_path(request), data: {turbo_method: :patch} %> |
+      <%= link_to "Reject", reject_friendship_path(request), data: { turbo_method: :delete } %></li>
   <% end %>
 </ul>

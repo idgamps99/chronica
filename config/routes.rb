@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   end
 
   resources :entries, only: [:edit, :update]
-  resources :friendships, only: [:index, :show, :update, :destroy]
+  resources :friendships, only: [:index, :show]
+  patch "friendships/:id/accept", to: "friendships#accept", as: :accept_friendship
+  delete "friendships/:id/reject", to: "friendships#reject", as: :reject_friendship
   resources :users, only: [:index]
 end
