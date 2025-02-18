@@ -1,0 +1,22 @@
+<div class="main-container">
+  <div class="top-container-left">
+    <h3><%= @friend.forename %>'s Diaries:</h3>
+  </div>
+  <div class="diary-grid">
+    <% @diaries.each do |diary| %>
+      <%= link_to diary_entries_path(diary) do %>
+        <div class="diary-card">
+          <div class="journal-sidebar"></div>
+          <div class="journal-content">
+            <div class="journal-box">
+              <div class="journal-header">
+                <h1><%= diary.title %></h1>
+              </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

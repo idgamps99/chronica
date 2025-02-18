@@ -1,0 +1,19 @@
+<%= render "shared/searchbar" %>
+
+<h2>My Friends:</h2>
+<ul>
+  <% @accepted.each do |friend| %>
+    <li><%= link_to "#{friend.forename} #{friend.surname}", friendship_path(friend), class: "text-black" %></li>
+  <% end %>
+</ul>
+
+<h2>Pending:</h2>
+<ul>
+  <% @pending.each do |friend| %>
+  <% request = Friendship.find_by(sender_id: friend.id, receiver_id: current_user) %>
+    <li>
+      <%= friend.forename %> <%= friend.surname %> -
+      <%= link_to "Accept", accept_friendship_path(request), data: {turbo_method: :patch} %> |
+      <%= link_to "Reject", reject_friendship_path(request), data: { turbo_method: :delete } %></li>
+  <% end %>
+</ul>
