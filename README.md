@@ -25,9 +25,6 @@ The inspiration behind this app comes from a personal place. My grandfather pass
 
 ### Community Features
 - **Friend Connections**: Connect with loved ones to share selected memories
-- **Collaborative Stories**: Create shared narratives about group experiences
-- **Memory Reactions**: Respond to shared memories with comments and reactions
-- **Anniversary Reminders**: Get notifications about significant memory milestones
 
 ## Technical Implementation
 
@@ -38,38 +35,6 @@ Chronica is built using Ruby on Rails, leveraging its robust MVC architecture to
 - **Active Storage**: For managing uploaded media files
 - **Devise**: For user authentication and session management
 - **Importmaps**: For JavaScript module management
-
-## Getting Started
-
-### Prerequisites
-- Ruby 3.1+
-- Rails 7.0+
-- PostgreSQL
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/chronica.git
-   cd chronica
-   ```
-
-2. Install dependencies:
-   ```bash
-   bundle install
-   ```
-
-3. Set up the database:
-   ```bash
-   rails db:create db:migrate db:seed
-   ```
-
-4. Start the server:
-   ```bash
-   rails server
-   ```
-
-5. Visit `http://localhost:3000` in your browser
 
 ## Project Structure
 
