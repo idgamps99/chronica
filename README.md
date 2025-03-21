@@ -16,12 +16,6 @@ The inspiration behind this app comes from a personal place. My grandfather pass
 ### Personal Journal
 - **Daily Entries**: Record your thoughts, experiences, and reflections
 - **Privacy Controls**: Choose what stays private and what can be shared
-- **Search & Tags**: Easily find past entries through tags and full-text search
-
-### Memory Capsule
-- **Memory Prompts**: Receive thoughtful questions to inspire meaningful reflections
-- **Legacy Access**: Designate trusted contacts who can access your memories in the future
-- **Memory Collections**: Group related memories into themed collections
 
 ### Community Features
 - **Friend Connections**: Connect with loved ones to share selected memories
