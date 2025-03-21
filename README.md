@@ -1,7 +1,7 @@
 # Chronica
 
 ## Video Demo
-[Link to video demo](#)
+https://youtu.be/EbJ06y1mV2Y
 
 ## Description
 Chronica is designed with two key purposes in mind:

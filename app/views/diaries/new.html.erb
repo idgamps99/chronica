@@ -1,6 +1,6 @@
 <div class="form-container">
   <div class="form-new-diary">
-    <%= simple_form_for @diary do |f| %>
+    <%= simple_form_for @diary, html: { autocomplete: "off" } do |f| %>
       <%= f.input :title, label: "Title" %>
       <%= f.input :private %>
       <%= f.button :submit %>

@@ -1,19 +1,26 @@
 <%= render "shared/searchbar" %>
 
-<h2>My Friends:</h2>
-<ul>
-  <% @accepted.each do |friend| %>
-    <li><%= link_to "#{friend.forename} #{friend.surname}", friendship_path(friend), class: "text-black" %></li>
-  <% end %>
-</ul>
+<div class="container mt-4">
+  <h2 class="mb-3">My Friends:</h2>
+  <div class="list-group">
+    <% @accepted.each do |friend| %>
+      <a href="<%= friendship_path(friend) %>" class="list-group-item list-group-item-action text-black">
+        <%= "#{friend.forename} #{friend.surname}" %>
+      </a>
+    <% end %>
+  </div>
 
-<h2>Pending:</h2>
-<ul>
-  <% @pending.each do |friend| %>
-  <% request = Friendship.find_by(sender_id: friend.id, receiver_id: current_user) %>
-    <li>
-      <%= friend.forename %> <%= friend.surname %> -
-      <%= link_to "Accept", accept_friendship_path(request), data: {turbo_method: :patch} %> |
-      <%= link_to "Reject", reject_friendship_path(request), data: { turbo_method: :delete } %></li>
-  <% end %>
-</ul>
+  <h2 class="mt-5 mb-3">Pending:</h2>
+  <div class="list-group">
+    <% @pending.each do |friend| %>
+      <% request = Friendship.find_by(sender_id: friend.id, receiver_id: current_user) %>
+      <div class="list-group-item d-flex justify-content-between align-items-center">
+        <span><%= friend.forename %> <%= friend.surname %></span>
+        <div>
+          <%= link_to "Accept", accept_friendship_path(request), class: "btn btn-success btn-sm me-2", data: { turbo_method: :patch } %>
+          <%= link_to "Reject", reject_friendship_path(request), class: "btn btn-danger btn-sm", data: { turbo_method: :delete } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
